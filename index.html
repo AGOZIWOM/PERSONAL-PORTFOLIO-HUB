@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Personal Portfolio Hub</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <!-- <header class="navbar">
+    <div class="logo">JIDEOFOR MALACHI A</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact" class="btn-nav">Contact Me</a>
+      <button id="themeToggle" class="theme-toggle">🌙</button>
+    </nav>
+  </header> -->
+
+  <header class="navbar" id="navbar">
+    <div class="logo">JIDEOFOR MALACHI A</div>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+      <i class="fa-solid fa-hamburger"></i>
+    </button>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact" class="btn-nav">Contact Me</a>
+      <button id="themeToggle" class="theme-toggle">🌙</button>
+    </nav>
+  </header>
+
+
+
+  <!-- HERO SECTION -->
+  <section class="hero reveal">
+    <div class="hero-content">
+      <h1>Hi, I'm <span>JIDEOFOR MALACHI AGOZIWOM</span></h1>
+      <h2>Frontend Web Developer</h2>
+      <p>
+        Building scalable, user-friendly web applications that solve real-world problems.
+      </p>
+      <div class="hero-buttons">
+        <a href="#projects" class="btn primary">View My Work</a>
+        <a href="#contact" class="btn secondary">Get in Touch</a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="illustration-container">
+        <img src="Landingpage assets/IMG_5113.PNG" alt="IMG" class="illustration"/>        
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about" class="about reveal">
+    <div class="about-card">
+      <div class="about-text">
+        <h3>About Me</h3>
+        <p>
+          I'm a passionate web developer focused on building clean, responsive, and performant
+          web applications using modern frontend technologies. I enjoy solving problems and
+          turning ideas into functional digital experiences.
+        </p>
+
+        <div class="stats">
+          <div class="stat">
+            <h4>2+</h4>
+            <span>Years Experience</span>
+          </div>
+          <div class="stat">
+            <h4>50+</h4>
+            <span>Projects Completed</span>
+          </div>
+          <div class="stat">
+            <h4>Multiple</h4>
+            <span>Specializations</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS SECTION -->
+  <section id="projects" class="projects reveal">
+    <h3>My Projects</h3>
+
+    <div class="project-grid">
+
+      <div class="project-card" data-title="Health Web App" data-desc="Healthcare-focused web applications" data-link="#">
+        <div class="project-icon health">
+          <i class="fa-solid fa-heart-pulse"></i>
+        </div>
+        <h4>Health Web App</h4>
+        <p>Healthcare-focused web applications.</p>
+        <button class="btn small open-modal">Preview</button>
+      </div>
+
+
+      <div class="project-card" data-title="Manufacturing Web App" data-desc="Industrial and production systems" data-link="#">
+        <div class="project-icon manufacturing">
+          <i class="fa-solid fa-industry"></i>
+        </div>
+        <h4>Manufacturing Web App</h4>
+        <p>Industrial and production systems.</p>
+        <button class="btn small open-modal">Preview</button>
+      </div>
+
+      <div class="project-card" data-title="E-Commerce Web App" data-desc="Online store and payment systems" data-link="#">
+        <div class="project-icon ecommerce">
+          <i class="fa-solid fa-shopping-cart"></i>
+        </div>
+        <h4>E-Commerce Web App</h4>
+        <p>Online stores and payment systems.</p>
+        <button class="btn small open-modal">Preview</button>
+      </div>
+
+      <div class="project-card" data-title="Finance Web App" data-desc="Financial tools and dashboard" data-link="#">
+        <div class="project-icon finance">
+          <i class="fa-solid fa-chart-line"></i>
+        </div>
+        <h4>Finance Web App</h4>
+        <p>Financial tools and dashboards.</p>
+        <button class="btn small open-modal">Preview</button>
+      </div>
+
+      <div class="project-card" data-title="Recreational Web Apps" data-desc="Fun and lifestyle applications" data-link="#">
+        <div class="project-icon recreational">
+          <i class="fa-solid fa-music"></i>
+        </div>
+        <h4>Recreational Web Apps</h4>
+        <p>Fun and lifestyle applications.</p>
+        <button class="btn small open-modal">Preview</button>
+      </div>
+
+      <div class="project-card" data-title="Calculator Apps" data-desc="Utility and productivity calculators" data-link="#">
+        <div class="project-icon calculator">
+          <i class="fa-solid fa-calculator"></i>
+        </div>
+        <h4>Calculator Apps</h4>
+        <p>Utility and productivity calculators.</p>
+        <button class="btn small open-modal">Preview</button>
+      </div>
+
+      <div class="project-card" data-title="Game Web App" data-desc="Interactive browser-based games" data-link="#">
+        <div class="project-icon game">
+          <i class="fa-solid fa-gamepad"></i>
+        </div>
+        <h4>Game Web App</h4>
+        <p>Interactive browser-based games.</p>
+        <button class="btn small open-modal">Preview</button>
+      </div>
+    </div>
+
+    <!-- <a href="#" class="btn primary view-all">View All Projects</a> -->
+  </section>
+
+  <!-- SKILLS SECTION -->
+  <section id="skills" class="skills reveal">
+    <h3>My Skills</h3>
+
+    <div class="skills-grid">
+      <span class="skill">🌐HTML (95%)</span>
+      <span class="skill">🎨CSS (90%)</span>
+      <span class="skill">💻JavaScript (80%)</span>
+      <span class="skill">🔧Git (85%)</span>
+      <span class="skill">📱Responsive Design (90%)</span>
+      <span class="skill">🧠Problem Solving (85%)</span>
+      <span class="skill">Teamwork (95%)</span>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="contact reveal">
+    <h3>Get In Touch</h3>
+
+    <form class="contact-form">
+      <input type="text" placeholder="Name" required />
+      <input type="email" placeholder="Email" required />
+      <textarea placeholder="Message" required></textarea>
+      <button type="submit" class="btn primary">Send Message</button>
+    </form>
+
+    <div class="social-links">
+      <a href="#">LinkedIn</a>
+      <a href="#">GitHub</a>
+      <a href="#">Twitter/X</a>
+      <a href="jideoformalachi@gmail.com">Email</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2026 AGZ. All rights reserved.</p>
+  </footer>
+
+  
+
+  <div class="modal" id="projectModal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h3 id="modalTitle"></h3>
+        <p id="modalDesc"></p>
+        <a id="modalLink" href="#" target="_blank" class="btn primary">Visit Project</a>
+    </div>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
