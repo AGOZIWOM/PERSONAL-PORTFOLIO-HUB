@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Tasks</title>
+  <link rel="stylesheet" href="todo.css" />
+</head>
+<body>
+
+<div class="app">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <h2>Mr Taskz</h2>
+
+    <nav class="categories">
+      <button data-category="all" class="active">All Tasks</button>
+      <button data-category="Work">Work</button>
+      <button data-category="Personal">Personal</button>
+      <button data-category="Shopping">Shopping</button>
+    </nav>
+
+    <div class="legend">
+      <p class="priority high">High</p>
+      <p class="priority medium">Medium</p>
+      <p class="priority low">Low</p>
+    </div>
+
+    <label class="focus-switch">
+      <input type="checkbox" id="focusToggle">
+      Focus Mode
+    </label>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+    <header class="controls">
+      <div class="tabs">
+        <button data-filter="all" class="active">All</button>
+        <button data-filter="active">Active</button>
+        <button data-filter="completed">Completed</button>
+      </div>
+
+      <button id="addTaskBtn">+ Add Task</button>
+    </header>
+
+    <input id="searchInput" placeholder="Search tasks..." />
+
+    <div id="taskList"></div>
+  </main>
+
+</div>
+
+<!-- MODAL -->
+<div class="modal hidden" id="taskModal">
+  <div class="modal-box">
+    <input id="taskTitle" placeholder="Task title" />
+    <select id="taskCategory">
+      <option>Work</option>
+      <option>Personal</option>
+      <option>Shopping</option>
+    </select>
+    <select id="taskPriority">
+      <option>High</option>
+      <option>Medium</option>
+      <option>Low</option>
+    </select>
+
+    <div class="modal-actions">
+      <button id="saveTask">Save</button>
+      <button id="cancelTask">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<script src="todo.js"></script>
+</body>
+</html>
