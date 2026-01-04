@@ -71,7 +71,7 @@ const modalDesc = document.getElementById("modalDesc");
 const modalLink = document.getElementById("modalLink");
 const closeModal = document.querySelector(".close-modal");
 
-document.querySelectorAll(".open-modal").forEach(btn => {
+document.querySelectorAll(".preview-btn").forEach(btn => {
   btn.addEventListener("click", e => {
     const card = e.target.closest(".project-card");
     modalTitle.textContent = card.dataset.title;
@@ -80,6 +80,26 @@ document.querySelectorAll(".open-modal").forEach(btn => {
     modal.style.display = "flex";
   });
 });
+
+// const modal = document.getElementById("projectModal");
+// const modalTitle = document.getElementById("modalTitle");
+// const modalDesc = document.getElementById("modalDesc");
+// const modalLink = document.getElementById("modalLink");
+// const closeModal = document.querySelector(".close-modal");
+
+/* OPEN MODAL FROM PREVIEW BUTTON */
+// document.querySelectorAll(".preview-btn").forEach(btn => {
+//   btn.addEventListener("click", e => {
+//     const btn = e.target.closest(".project-card");
+//     e.stopPropagation(); // prevents card click issues
+    
+//     modalTitle.textContent = btn.dataset.title;
+//     modalDesc.textContent = btn.dataset.desc;
+//     modalLink.href = btn.dataset.link;
+
+//     modal.classList.add("active");
+//   });
+// });
 
 closeModal.addEventListener("click", () => {
   modal.style.display = "none";
