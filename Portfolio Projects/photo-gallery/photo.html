@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Photo Gallery</title>
+  <link rel="stylesheet" href="photo.css"/>
+</head>
+<body>
+
+<header class="header">
+  <h1>Foto Gallery</h1>
+  <div class="header-actions">
+    <label class="upload-btn">
+      Upload Image
+      <input type="file" id="uploadInput" accept="image/*" hidden />
+    </label>
+    <button id="deleteBtn" class="danger">Delete Selected</button>
+  </div>
+</header>
+
+<section class="filters">
+  <button class="filter active" data-category="all">All</button>
+  <button class="filter" data-category="Nature">Nature</button>
+  <button class="filter" data-category="Travel">Travel</button>
+  <button class="filter" data-category="Cities">Cities</button>
+  <button class="filter" data-category="Animals">Animals</button>
+  <button class="filter" data-category="Food">Food</button>
+</section>
+
+<main class="gallery" id="gallery"></main>
+
+<!-- LIGHTBOX MODAL -->
+<div class="lightbox hidden" id="lightbox">
+  <span class="close">&times;</span>
+  <img id="lightboxImg" />
+</div>
+
+<script src="photo.js"></script>
+</body>
+</html>
