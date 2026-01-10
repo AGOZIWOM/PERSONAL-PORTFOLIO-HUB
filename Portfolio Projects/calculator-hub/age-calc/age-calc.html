@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Age Calculator</title>
+  <link rel="stylesheet" href="age-calc.css">
+</head>
+<body>
+
+<div class="app">
+  <h1>Age Calculator</h1>
+  <p class="subtitle">Calculate your exact age and next birthday</p>
+
+  <div class="input-card">
+    <label for="dob">Date of Birth</label>
+    <input type="date" id="dob" />
+    <button id="calculateBtn">Calculate Age</button>
+    <p id="error" class="error"></p>
+  </div>
+
+  <div class="result-card hidden" id="result">
+    <h2>Your Age</h2>
+    <p><strong>Years:</strong> <span id="years"></span></p>
+    <p><strong>Months:</strong> <span id="months"></span></p>
+    <p><strong>Days:</strong> <span id="days"></span></p>
+    <p class="next-birthday">
+      🎂 Days until next birthday: <span id="nextBirthday"></span>
+    </p>
+  </div>
+
+  <div class="history-card">
+    <div class="history-header">
+      <h3>History</h3>
+      <button id="clearHistory">Clear</button>
+    </div>
+    <ul id="historyList"></ul>
+  </div>
+</div>
+
+<script src="age-calc.js"></script>
+</body>
+</html>

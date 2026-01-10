@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #0f0f0f;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.app {
+  max-width: 420px;
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+  color: #b8860b;
+}
+
+.subtitle {
+  text-align: center;
+  color: #ccc;
+  margin-bottom: 1.5rem;
+}
+
+.converter-card,
+.result-card,
+.history-card {
+  background: #1a1a1a;
+  border-radius: 14px;
+  padding: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 4px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+}
+
+input.invalid {
+  outline: 2px solid #ff4d4d;
+}
+
+.unit-row {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  margin-top: 12px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 25px;
+  border: none;
+  background: #b8860b;
+  color: #111;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+button:hover {
+  background: #d4a017;
+}
+
+.error {
+  color: #ff6b6b;
+  font-size: 0.9rem;
+  margin-top: 6px;
+}
+
+.hidden {
+  display: none;
+}
+
+.result-card {
+  animation: fadeIn 0.4s ease;
+}
+
+#resultText {
+  font-size: 1.1rem;
+  color: #b8860b;
+}
+
+.history-card ul {
+  list-style: none;
+  padding: 0;
+  max-height: 160px;
+  overflow-y: auto;
+}
+
+.history-card li {
+  font-size: 0.9rem;
+  color: #ccc;
+  border-bottom: 1px solid #333;
+  padding: 6px 0;
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.history-header button {
+  width: auto;
+  padding: 4px 10px;
+  font-size: 0.8rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 480px) {
+  .unit-row {
+    flex-direction: column;
+  }
+}
