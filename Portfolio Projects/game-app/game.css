@@ -1,0 +1,142 @@
+:root {
+  --purple: #5a2a82;
+  --gold: #b8860b;
+  --dark: #1e1e1e;
+  --light: #f4f4f4;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: var(--dark);
+  color: var(--light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.screen {
+  display: none;
+  text-align: center;
+  animation: fadeIn 0.5s ease;
+}
+
+.screen.active {
+  display: block;
+}
+
+h1, h2 {
+  color: var(--gold);
+}
+
+button {
+  background: var(--purple);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: transform 0.2s, background 0.2s;
+}
+
+button:hover {
+  background: var(--gold);
+  transform: scale(1.05);
+}
+
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+#stop-btn {
+  background: #8b0000;
+}
+
+#stop-btn:hover {
+  background: #ff4d4d;
+}
+
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: #2a2a2a;
+  border: 2px solid #b8860b;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-actions {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.modal-actions button {
+  padding: 8px 14px;
+}
+
+
+
+.game-board {
+  display: grid;
+  gap: 10px;
+  justify-content: center;
+}
+
+.card {
+  width: 60px;
+  height: 80px;
+  background: var(--purple);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.card.flipped,
+.card.matched {
+  background: var(--gold);
+  transform: rotateY(360deg);
+}
+
+@media (max-width: 600px) {
+  .card {
+    width: 45px;
+    height: 60px;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}

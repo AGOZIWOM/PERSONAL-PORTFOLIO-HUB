@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Memory Card Game</title>
+  <link rel="stylesheet" href="game.css" />
+</head>
+<body>
+
+  <!-- START SCREEN -->
+  <section id="start-screen" class="screen active">
+    <h1>🧠 Memory Card Game</h1>
+    <p>Select Difficulty</p>
+    <div class="difficulty-buttons">
+      <button data-level="easy">Easy</button>
+      <button data-level="medium">Medium</button>
+      <button data-level="hard">Hard</button>
+    </div>
+  </section>
+
+  <!-- GAME SCREEN -->
+  <section id="game-screen" class="screen">
+    <header class="game-header">
+      <div>⏱ Time: <span id="timer">0</span>s</div>
+      <div>🎯 Score: <span id="score">0</span></div>
+      <div>❤️ Attempts: <span id="attempts">0</span></div>
+      <button id="pause-btn">⏸ Pause</button>
+      <button id="stop-btn">⛔ Stop</button>
+    </header>
+
+    <div id="game-board" class="game-board"></div>
+  </section>
+
+  <!-- GAME OVER SCREEN -->
+  <section id="game-over-screen" class="screen">
+    <h2>Game Over</h2>
+    <p>Final Score: <span id="final-score"></span></p>
+    <p>Best Score: <span id="best-score"></span></p>
+    <button id="restart-btn">Restart</button>
+  </section>
+
+
+  <div id="stop-modal" class="modal hidden">
+    <div class="modal-content">
+        <h3>End Game?</h3>
+        <p>Are you sure you want to stop playing?</p>
+
+        <div class="modal-actions">
+            <button id="confirm-stop">Yes, Stop</button>
+            <button id="cancel-stop">Cancel</button>
+        </div>
+    </div>
+  </div>
+
+
+  <script src="game.js"></script>
+</body>
+</html>
